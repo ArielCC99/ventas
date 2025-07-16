@@ -1,5 +1,8 @@
+<?php
+require "header.php";
+?>
 
-        <!--Contenido principal-->
+<!--Contenido principal-->
         <div class="content-wrapper">
             <!--Main content-->
             <section class="content">
@@ -8,16 +11,16 @@
                         <div class="box">
                             <div class="box-header with-border">
                                 <h1 class="boxtittle">Categoria <button class="btn btn-success" id="btnagregar"
-                                        onclick="mostrarform()"><i class="fa fa-plus-circle"></i>Agregar</button></h1>
+                                        onclick="mostrarform(true)"><i class="fa fa-plus-circle"></i>Agregar</button></h1>
                                 <div class="box-tools pull-right">
 
                                 </div>
                                 <!--Fin de cabecera box-->
                                 <!--Centro del box-->
-                                <div class="panel-body table-reponsive" id="listado_registro">
+                                <div class="panel-body table-reponsive" id="listadoregistro">
                                     <table
                                         class="table table-striped table-bordered table-responsive table-condensed table-hover"
-                                        id="listado">
+                                        id="tbllistado">
                                         <thead>
                                             <th>Id Cetegoría</th>
                                             <th>Nombre</th>
@@ -39,7 +42,7 @@
                                     </table>
                                 </div><!--Fin contenedor table-->
                                 <!--Inicio contenedor formulario-->
-                                <div class="panel-body" style="height: 400px;" id="formulario_registros">
+                                <div class="panel-body" style="height: 400px;" id="formularioregistros">
                                     <form action="" name="formulario" id="formulario" method="POST">
                                         <div class="form-group col-lg-6 col-md-6 col-ms-6 col-xs-12">
                                             <label for="nombre">Ingrese el nombre:</label>
@@ -55,7 +58,7 @@
 
                                         <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <button class="btn btn-primary" type="submit" id="btnGuardar"><i class="fa fa-save"></i>Guardar</button>
-                                            <button class="btn btn-danger" type="button" onclick="cancelarForm()"><i class="fa fa-arrow-circle-left"></i>Cancelar</button>
+                                            <button class="btn btn-danger" type="button" onclick="cancelarform()"><i class="fa fa-arrow-circle-left"></i>Cancelar</button>
                                         </div>
                                     </form>
                                 </div>
@@ -66,13 +69,11 @@
             </section>
         </div>
 
-
-
-
-
-
-
     </div>
 
-
-   
+    <?php
+    require 'footer.php';
+    ?> 
+    
+    <script src="js/categoria.js" type="text/javascript"></script>
+  
